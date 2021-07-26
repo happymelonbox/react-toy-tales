@@ -4,7 +4,8 @@ class ToyCard extends Component {
   constructor(props){
     super(props)
     this.state = {
-      likes: props.likes
+      likes: props.likes,
+      id: props.id
     }
   }
 
@@ -22,8 +23,19 @@ class ToyCard extends Component {
     })
   }
 
-  handleDonate = (event) => {
-    
+  handleDonate = () => {
+    let toyURL = 'http://localhost:3000/toys/'
+    let id = this.state.id
+    fetch(toyURL + id,{
+      method: 'DELETE',
+      headers:{
+        'Content-Type': 'application/json'
+      }})
+    .then(resp=>resp.json())
+    .then(data=>{
+      console.log(data)
+      window.location.reload()
+    })
 
   }
 
