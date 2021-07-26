@@ -4,7 +4,6 @@ import './App.css';
 import Header from './components/Header'
 import ToyForm from './components/ToyForm'
 import ToyContainer from './components/ToyContainer'
-import ToyCard from './components/ToyCard';
 
 
 class App extends React.Component{

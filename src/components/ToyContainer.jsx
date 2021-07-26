@@ -9,10 +9,11 @@ const ToyContainer = ({toys}) => {
   );
 }
 
+
 const eachToy = ({name, image, likes}) =>{
   return (
     <div key={name}>
-      <ToyCard name={name} image={image} likes={likes}/>
+      <ToyCard name={name} image={image} likes={likes} />
     </div>
   )
 }
